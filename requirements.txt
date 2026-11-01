@@ -1,0 +1,10 @@
+openai>=1.30.0
+gnani-vachana
+chromadb
+langchain
+langchain-community
+sentence-transformers
+python-dotenv
+pandas
+requests
+
