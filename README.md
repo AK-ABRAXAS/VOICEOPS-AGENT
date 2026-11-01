@@ -22,49 +22,48 @@ An end-to-end, voice-enabled conversational AI support agent developed for Zentr
 ## Installation & Setup
 
 ### 1. Clone the Repository
-\\\bash
+bash
 git clone https://github.com/AK-ABRAXAS/VOICEOPS-AGENT.git
 cd VOICEOPS-AGENT
-\\\
+
 
 ### 2. Set Up a Virtual Environment
 
 **On Windows (PowerShell):**
-\\\powershell
+powershell
 python -m venv venv
 .\venv\Scripts\Activate.ps1
-\\\
 
 **On macOS / Linux:**
-\\\bash
+bash
 python3 -m venv venv
 source venv/bin/activate
-\\\
+
 
 ### 3. Install Required Dependencies
-\\\bash
+bash
 pip install -r requirements.txt
-\\\
+
 
 ### 4. Configure Environment Variables
 Copy the template \.env.example\ file to create your local \.env\:
 
 **On Windows (PowerShell):**
-\\\powershell
+powershell
 Copy-Item .env.example .env
-\\\
+
 
 **On macOS / Linux:**
-\\\bash
+bash
 cp .env.example .env
-\\\
+
 
 Open \.env\ and insert your valid API credentials:
-\\\env
+env
 GEMINI_API_KEY=your_actual_gemini_api_key
 GNANI_API_KEY=your_actual_gnani_api_key
 GNANI_TOKEN=your_actual_gnani_token
-\\\
+
 
 ---
 
@@ -73,9 +72,9 @@ GNANI_TOKEN=your_actual_gnani_token
 ### 1. Official Batch Voice Directory Evaluation (Primary Command)
 To evaluate the pipeline across a directory of customer \.wav\ audio files:
 
-\\\ash
+bash
 python run.py --mode audio_dir --audio_dir sample_audio --output_dir sample_outputs
-\\\
+
 
 - **Input:** Place any 16 kHz PCM \.wav\ customer audio files inside \sample_audio/\.
 - **Audio Output:** Synthesized spoken response files are saved in \sample_outputs/\ (e.g., \<filename>_reply.wav\).
@@ -86,25 +85,25 @@ python run.py --mode audio_dir --audio_dir sample_audio --output_dir sample_outp
 ### 2. Practice Questions Evaluation (CSV Mode)
 To run text-based evaluation over single-turn customer policy questions:
 
-\\\bash
+bash
 python run.py --mode questions --input practice/questions.csv --limit 10
-\\\
+
 
 ---
 
 ### 3. Multi-Turn Conversation Evaluation
 To run multi-turn dialogs verifying caller authentication gates (pincode/phone tail) and policy handovers:
 
-\\\ash
+bash
 python run.py --mode conversations --input practice/conversations.csv --limit 5
-\\\
+
 
 ---
 
 ### 4. Step 1 vs. Step 2 Baseline Benchmark
 To reproduce the ungrounded baseline vs. ChromaDB RAG-grounded retrieval evaluation:
 
-\\\bash
+bash
 python run_eval.py
-\\\
+
 Results are saved to \step1_vs_step2_results.csv\.
