@@ -1,0 +1,50 @@
+[
+  {
+    "audio_file": "sample_audio\\Recording (2).wav",
+    "transcript": "can i speak to a person",
+    "agent_response": "Yes, I can connect you to a human colleague. Please hold while I transfer your call.",
+    "audio_reply_file": "sample_outputs\\Recording (2)_reply.wav",
+    "sources": [
+      "faq_general",
+      "agent_conversation_style",
+      "agent_conversation_style"
+    ],
+    "verified": false
+  },
+  {
+    "audio_file": "sample_audio\\Recording (3).wav",
+    "transcript": "the item i received is damaged",
+    "agent_response": "I can certainly help you with that! Please report a damaged item within 48 hours of delivery, along with photos of the item and the packaging.",
+    "audio_reply_file": "sample_outputs\\Recording (3)_reply.wav",
+    "sources": [
+      "pol_returns_v4",
+      "pol_damaged_wrong_missing",
+      "pol_damaged_wrong_missing"
+    ],
+    "verified": false
+  },
+  {
+    "audio_file": "sample_audio\\Recording.wav",
+    "transcript": "order cancel karna hai",
+    "agent_response": "You can cancel any order free of charge before it ships by going to My Orders in the ZentroMart app.",
+    "audio_reply_file": "sample_outputs\\Recording_reply.wav",
+    "sources": [
+      "pol_cancellations",
+      "pol_cancellations",
+      "pol_cancellations"
+    ],
+    "verified": false
+  },
+  {
+    "audio_file": "sample_audio\\question1.wav.wav",
+    "transcript": "hi what is the return policy for groceries if the items are spoiled",
+    "agent_response": "Grocery and fresh produce cannot be returned for a change of mind, but if your item arrives damaged, spoiled, or wrong, please report it within 48 hours with photos.",
+    "audio_reply_file": "sample_outputs\\question1.wav_reply.wav",
+    "sources": [
+      "pol_returns_v4",
+      "faq_general",
+      "pol_returns_v4"
+    ],
+    "verified": false
+  }
+]
