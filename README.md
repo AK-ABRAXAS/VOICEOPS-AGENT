@@ -22,7 +22,7 @@ An end-to-end, voice-enabled conversational AI support agent developed for Zentr
 ## Installation & Setup
 
 ### 1. Clone the Repository
-\\\ash
+\\\bash
 git clone https://github.com/AK-ABRAXAS/VOICEOPS-AGENT.git
 cd VOICEOPS-AGENT
 \\\
@@ -36,13 +36,13 @@ python -m venv venv
 \\\
 
 **On macOS / Linux:**
-\\\ash
+\\\bash
 python3 -m venv venv
 source venv/bin/activate
 \\\
 
 ### 3. Install Required Dependencies
-\\\ash
+\\\bash
 pip install -r requirements.txt
 \\\
 
@@ -55,7 +55,7 @@ Copy-Item .env.example .env
 \\\
 
 **On macOS / Linux:**
-\\\ash
+\\\bash
 cp .env.example .env
 \\\
 
@@ -86,7 +86,7 @@ python run.py --mode audio_dir --audio_dir sample_audio --output_dir sample_outp
 ### 2. Practice Questions Evaluation (CSV Mode)
 To run text-based evaluation over single-turn customer policy questions:
 
-\\\ash
+\\\bash
 python run.py --mode questions --input practice/questions.csv --limit 10
 \\\
 
@@ -104,7 +104,7 @@ python run.py --mode conversations --input practice/conversations.csv --limit 5
 ### 4. Step 1 vs. Step 2 Baseline Benchmark
 To reproduce the ungrounded baseline vs. ChromaDB RAG-grounded retrieval evaluation:
 
-\\\ash
+\\\bash
 python run_eval.py
 \\\
 Results are saved to \step1_vs_step2_results.csv\.
